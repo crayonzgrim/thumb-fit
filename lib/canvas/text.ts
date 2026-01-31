@@ -13,9 +13,11 @@ export function drawText(
   const lineHeight = text.fontSize * 1.2;
 
   // Calculate position - center by default, offset moves from center
-  const x = canvasWidth / 2;
+  const baseX = canvasWidth / 2;
   const baseY = canvasHeight / 2;
-  const offsetY = (text.positionOffset / 100) * canvasHeight;
+  const offsetX = (text.positionOffsetX / 100) * canvasWidth;
+  const offsetY = (text.positionOffsetY / 100) * canvasHeight;
+  const x = baseX + offsetX;
   const totalHeight = lines.length * lineHeight;
 
   // Center the text block vertically around the position
