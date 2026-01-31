@@ -49,7 +49,8 @@ export const INITIAL_STATE: CanvasState = {
     content: '',
     fontSize: 48,
     color: '#ffffff',
-    positionOffset: 0,
+    positionOffsetX: 0,
+    positionOffsetY: 0,
     rotation: 0,
     background: { ...DEFAULT_TEXT_BACKGROUND },
     shadow: { ...DEFAULT_SHADOW },
@@ -69,10 +70,28 @@ export const FONT_SIZE_RANGE = {
   step: 4,
 } as const;
 
-export const POSITION_OFFSET_RANGE = {
+export const POSITION_OFFSET_X_RANGE = {
   min: -50,
   max: 50,
   step: 1,
+} as const;
+
+export const POSITION_OFFSET_Y_RANGE = {
+  min: -50,
+  max: 50,
+  step: 1,
+} as const;
+
+export const TEXT_BG_PADDING_X_RANGE = {
+  min: 0,
+  max: 1000,
+  step: 10,
+} as const;
+
+export const TEXT_BG_PADDING_Y_RANGE = {
+  min: 0,
+  max: 500,
+  step: 10,
 } as const;
 
 export const SHADOW_BLUR_RANGE = {
@@ -96,7 +115,8 @@ export const TEMPLATES: Template[] = [
     text: {
       fontSize: 72,
       color: '#ffffff',
-      positionOffset: 30,
+      positionOffsetX: 0,
+      positionOffsetY: 30,
       rotation: 0,
       background: { enabled: true, color: '#000000', paddingX: 30, paddingY: 15 },
       shadow: { enabled: true, color: '#000000', blur: 12, offsetX: 4, offsetY: 4 },
@@ -111,7 +131,8 @@ export const TEMPLATES: Template[] = [
     text: {
       fontSize: 48,
       color: '#ffffff',
-      positionOffset: 0,
+      positionOffsetX: 0,
+      positionOffsetY: 0,
       rotation: 0,
       background: { enabled: false, color: '#000000', paddingX: 20, paddingY: 10 },
       shadow: { enabled: true, color: 'rgba(0,0,0,0.5)', blur: 20, offsetX: 0, offsetY: 0 },
@@ -125,7 +146,8 @@ export const TEMPLATES: Template[] = [
     text: {
       fontSize: 56,
       color: '#f97316',
-      positionOffset: 25,
+      positionOffsetX: 0,
+      positionOffsetY: 25,
       rotation: 0,
       background: { enabled: true, color: '#000000', paddingX: 25, paddingY: 12 },
       shadow: { enabled: true, color: '#000000', blur: 6, offsetX: 2, offsetY: 2 },
@@ -140,7 +162,8 @@ export const TEMPLATES: Template[] = [
     text: {
       fontSize: 64,
       color: '#ec4899',
-      positionOffset: -30,
+      positionOffsetX: 0,
+      positionOffsetY: -30,
       rotation: 0,
       background: { enabled: false, color: '#000000', paddingX: 20, paddingY: 10 },
       shadow: { enabled: true, color: '#000000', blur: 10, offsetX: 3, offsetY: 3 },
@@ -155,7 +178,8 @@ export const TEMPLATES: Template[] = [
     text: {
       fontSize: 80,
       color: '#22c55e',
-      positionOffset: 20,
+      positionOffsetX: 0,
+      positionOffsetY: 20,
       rotation: -5,
       background: { enabled: true, color: '#000000', paddingX: 40, paddingY: 20 },
       shadow: { enabled: true, color: '#22c55e', blur: 15, offsetX: 0, offsetY: 0 },
@@ -170,7 +194,8 @@ export const TEMPLATES: Template[] = [
     text: {
       fontSize: 52,
       color: '#f5f5f5',
-      positionOffset: 35,
+      positionOffsetX: 0,
+      positionOffsetY: 35,
       rotation: 0,
       background: { enabled: false, color: '#000000', paddingX: 20, paddingY: 10 },
       shadow: { enabled: true, color: 'rgba(0,0,0,0.9)', blur: 25, offsetX: 0, offsetY: 5 },
