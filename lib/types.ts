@@ -34,7 +34,8 @@ export interface TextSettings {
   content: string;
   fontSize: number;
   color: string;
-  positionOffset: number; // Vertical position (-50 to 50)
+  positionOffsetX: number; // Horizontal position (-50 to 50)
+  positionOffsetY: number; // Vertical position (-50 to 50)
   rotation: number; // Text rotation in degrees (-180 to 180)
   background: TextBackground;
   shadow: TextShadow;
