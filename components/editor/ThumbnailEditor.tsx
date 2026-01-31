@@ -67,11 +67,11 @@ function EditorContent() {
         <div className="flex flex-col gap-6">
           <ImageUploader />
           <div className="h-px bg-zinc-200 dark:bg-zinc-700" />
-          <TemplateSelector />
+          <RatioSelector />
           <div className="h-px bg-zinc-200 dark:bg-zinc-700" />
           <OverlayImageUploader />
           <div className="h-px bg-zinc-200 dark:bg-zinc-700" />
-          <RatioSelector />
+          <TemplateSelector />
           <TextControls />
         </div>
       </div>
