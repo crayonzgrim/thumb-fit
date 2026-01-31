@@ -7,7 +7,10 @@ import { Slider } from '@/components/ui/Slider';
 import { ColorPicker } from '@/components/ui/ColorPicker';
 import {
   FONT_SIZE_RANGE,
-  POSITION_OFFSET_RANGE,
+  POSITION_OFFSET_X_RANGE,
+  POSITION_OFFSET_Y_RANGE,
+  TEXT_BG_PADDING_X_RANGE,
+  TEXT_BG_PADDING_Y_RANGE,
   ROTATION_RANGE,
   SHADOW_BLUR_RANGE,
 } from '@/lib/constants';
@@ -52,17 +55,32 @@ export function TextControls() {
         }
       />
 
-      {/* Position Offset Slider */}
+      {/* Horizontal Position Offset Slider */}
       <Slider
-        label={t('positionOffset')}
-        min={POSITION_OFFSET_RANGE.min}
-        max={POSITION_OFFSET_RANGE.max}
-        step={POSITION_OFFSET_RANGE.step}
-        value={state.text.positionOffset}
+        label={t('positionOffsetX')}
+        min={POSITION_OFFSET_X_RANGE.min}
+        max={POSITION_OFFSET_X_RANGE.max}
+        step={POSITION_OFFSET_X_RANGE.step}
+        value={state.text.positionOffsetX}
         onChange={(e) =>
           dispatch({
             type: 'SET_TEXT',
-            payload: { positionOffset: Number(e.target.value) },
+            payload: { positionOffsetX: Number(e.target.value) },
+          })
+        }
+      />
+
+      {/* Vertical Position Offset Slider */}
+      <Slider
+        label={t('positionOffsetY')}
+        min={POSITION_OFFSET_Y_RANGE.min}
+        max={POSITION_OFFSET_Y_RANGE.max}
+        step={POSITION_OFFSET_Y_RANGE.step}
+        value={state.text.positionOffsetY}
+        onChange={(e) =>
+          dispatch({
+            type: 'SET_TEXT',
+            payload: { positionOffsetY: Number(e.target.value) },
           })
         }
       />
@@ -124,9 +142,9 @@ export function TextControls() {
               {/* Horizontal Padding */}
               <Slider
                 label={t('textBgPaddingX')}
-                min={0}
-                max={100}
-                step={5}
+                min={TEXT_BG_PADDING_X_RANGE.min}
+                max={TEXT_BG_PADDING_X_RANGE.max}
+                step={TEXT_BG_PADDING_X_RANGE.step}
                 value={state.text.background.paddingX}
                 onChange={(e) =>
                   dispatch({
@@ -144,9 +162,9 @@ export function TextControls() {
               {/* Vertical Padding */}
               <Slider
                 label={t('textBgPaddingY')}
-                min={0}
-                max={100}
-                step={5}
+                min={TEXT_BG_PADDING_Y_RANGE.min}
+                max={TEXT_BG_PADDING_Y_RANGE.max}
+                step={TEXT_BG_PADDING_Y_RANGE.step}
                 value={state.text.background.paddingY}
                 onChange={(e) =>
                   dispatch({
