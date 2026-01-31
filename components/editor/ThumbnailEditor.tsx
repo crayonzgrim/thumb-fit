@@ -12,6 +12,7 @@ import { TemplateSelector } from './TemplateSelector';
 import { OverlayImageUploader } from './OverlayImageUploader';
 import { ExportButton } from './ExportButton';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
+import { KakaoAdFit } from '@/components/ui/KakaoAdFit';
 
 function EditorContent() {
   const canvasPreviewRef = useRef<CanvasPreviewHandle>(null);
@@ -38,6 +39,16 @@ function EditorContent() {
             </p>
           </div>
           <LanguageSwitcher />
+        </div>
+
+        {/* Mobile: Banner ad above canvas (320x50) */}
+        <div className="flex shrink-0 justify-center lg:hidden">
+          <KakaoAdFit
+            unit="DAN-nBSlAtOUGbe0nYjU"
+            width={320}
+            height={50}
+            className="overflow-hidden"
+          />
         </div>
 
         {/* Canvas Preview */}
