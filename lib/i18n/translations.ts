@@ -38,6 +38,12 @@ export const translations = {
     textBgPaddingX: 'Horizontal Padding',
     textBgPaddingY: 'Vertical Padding',
 
+    // Text Style
+    textStyleBold: 'Bold',
+    textStyleItalic: 'Italic',
+    textStyleUnderline: 'Underline',
+    textStyleStrikethrough: 'Strikethrough',
+
     // Shadow Controls
     textShadow: 'Text Shadow',
     shadowEnabled: 'Enable Shadow',
@@ -107,6 +113,12 @@ export const translations = {
     textBgColor: '배경 색상',
     textBgPaddingX: '가로 여백',
     textBgPaddingY: '세로 여백',
+
+    // Text Style
+    textStyleBold: '굵게',
+    textStyleItalic: '기울임',
+    textStyleUnderline: '밑줄',
+    textStyleStrikethrough: '취소선',
 
     // Shadow Controls
     textShadow: '텍스트 그림자',
