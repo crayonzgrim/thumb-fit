@@ -36,6 +36,13 @@ export const DEFAULT_TEXT_BACKGROUND = {
   paddingY: 10,
 } as const;
 
+export const DEFAULT_TEXT_STYLE = {
+  bold: true,
+  italic: false,
+  underline: false,
+  strikethrough: false,
+} as const;
+
 export const INITIAL_STATE: CanvasState = {
   ratio: '16:9',
   image: {
@@ -49,6 +56,7 @@ export const INITIAL_STATE: CanvasState = {
     content: '',
     fontSize: 48,
     color: '#ffffff',
+    style: { ...DEFAULT_TEXT_STYLE },
     positionOffsetX: 0,
     positionOffsetY: 0,
     rotation: 0,
