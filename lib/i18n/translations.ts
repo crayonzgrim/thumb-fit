@@ -76,6 +76,11 @@ export const translations = {
 
     // Custom Color
     customColor: 'Custom',
+
+    // Contact
+    contact: 'Contact',
+    contactTooltip: 'Have a feature request or found a bug? Let me know!',
+    emailCopied: 'Email copied!',
   },
   ko: {
     // Header
@@ -152,6 +157,11 @@ export const translations = {
 
     // Custom Color
     customColor: '사용자 지정',
+
+    // Contact
+    contact: '문의',
+    contactTooltip: '추가 기능이 필요하거나 버그를 발견하셨나요? 알려주세요!',
+    emailCopied: '이메일이 복사되었습니다!',
   },
 } as const;
 

@@ -12,6 +12,7 @@ import { TemplateSelector } from './TemplateSelector';
 import { OverlayImageUploader } from './OverlayImageUploader';
 import { ExportButton } from './ExportButton';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
+import { ContactButton } from '@/components/ui/ContactButton';
 import { KakaoAdFit } from '@/components/ui/KakaoAdFit';
 
 function EditorContent() {
@@ -38,7 +39,10 @@ function EditorContent() {
               {t('subtitle')}
             </p>
           </div>
-          <LanguageSwitcher />
+          <div className="flex items-center gap-2">
+            <ContactButton />
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Mobile: Banner ad above canvas (320x50) */}
