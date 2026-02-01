@@ -30,10 +30,18 @@ export interface TextBackground {
   paddingY: number; // Vertical padding
 }
 
+export interface TextStyle {
+  bold: boolean;
+  italic: boolean;
+  underline: boolean;
+  strikethrough: boolean;
+}
+
 export interface TextSettings {
   content: string;
   fontSize: number;
   color: string;
+  style: TextStyle;
   positionOffsetX: number; // Horizontal position (-50 to 50)
   positionOffsetY: number; // Vertical position (-50 to 50)
   rotation: number; // Text rotation in degrees (-180 to 180)
@@ -85,6 +93,7 @@ export type CanvasAction =
   | { type: 'ADD_OVERLAY'; payload: OverlayImage }
   | { type: 'UPDATE_OVERLAY'; payload: { id: string; updates: Partial<OverlayImage> } }
   | { type: 'REMOVE_OVERLAY'; payload: string }
+  | { type: 'REORDER_OVERLAY'; payload: { fromIndex: number; toIndex: number } }
   | { type: 'SELECT_OVERLAY'; payload: string | null }
   | { type: 'RESET' };
 
