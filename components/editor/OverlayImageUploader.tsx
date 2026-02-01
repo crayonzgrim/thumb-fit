@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useCallback, useState } from 'react';
+import { useRef, useCallback, useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useCanvasState } from '@/hooks/useCanvasState';
 import { useI18n } from '@/lib/i18n';
@@ -23,6 +23,11 @@ export function OverlayImageUploader() {
   const { t, locale } = useI18n();
   const inputRef = useRef<HTMLInputElement>(null);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+  const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
+  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
+  const [dragPosition, setDragPosition] = useState({ x: 0, y: 0 });
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const createOverlayFromImage = useCallback(
     (img: HTMLImageElement) => {
@@ -112,6 +117,69 @@ export function OverlayImageUploader() {
     },
     [dispatch, state.selectedOverlayId]
   );
+
+  const handleMouseDown = useCallback((e: React.MouseEvent, index: number) => {
+    e.preventDefault();
+    const rect = itemRefs.current[index]?.getBoundingClientRect();
+    if (rect) {
+      setDragOffset({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+      setDragPosition({ x: e.clientX, y: e.clientY });
+    }
+    setDraggedIndex(index);
+    setDragOverIndex(index);
+  }, []);
+
+  useEffect(() => {
+    if (draggedIndex === null) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      setDragPosition({ x: e.clientX, y: e.clientY });
+
+      // Find which item we're hovering over
+      const elements = itemRefs.current;
+      for (let i = 0; i < elements.length; i++) {
+        const el = elements[i];
+        if (el && i !== draggedIndex) {
+          const rect = el.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          if (e.clientX >= rect.left && e.clientX <= rect.right) {
+            // Determine if we're on the left or right side
+            if (e.clientX < centerX) {
+              setDragOverIndex(i);
+            } else {
+              setDragOverIndex(i + 1 > draggedIndex ? i : i + 1);
+            }
+            break;
+          }
+        }
+      }
+    };
+
+    const handleMouseUp = () => {
+      if (draggedIndex !== null && dragOverIndex !== null && draggedIndex !== dragOverIndex) {
+        const toIndex = dragOverIndex > draggedIndex ? dragOverIndex - 1 : dragOverIndex;
+        if (toIndex !== draggedIndex) {
+          dispatch({
+            type: 'REORDER_OVERLAY',
+            payload: { fromIndex: draggedIndex, toIndex },
+          });
+        }
+      }
+      setDraggedIndex(null);
+      setDragOverIndex(null);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [draggedIndex, dragOverIndex, dispatch]);
 
   return (
     <div className="flex flex-col gap-2">
@@ -214,18 +282,50 @@ export function OverlayImageUploader() {
       {/* Overlay Images List */}
       {state.overlayImages.length > 0 && (
         <div className="mt-2 flex flex-wrap gap-2">
-          {state.overlayImages.map((overlay) => {
+          {state.overlayImages.map((overlay, index) => {
             const isSelected = state.selectedOverlayId === overlay.id;
+            const isDragging = draggedIndex === index;
+
+            // Calculate if this item should shift
+            let shouldShift = false;
+            let shiftDirection = 0;
+            if (draggedIndex !== null && dragOverIndex !== null && draggedIndex !== dragOverIndex) {
+              if (draggedIndex < dragOverIndex) {
+                // Dragging right: items between draggedIndex and dragOverIndex shift left
+                if (index > draggedIndex && index < dragOverIndex) {
+                  shouldShift = true;
+                  shiftDirection = -1;
+                }
+              } else {
+                // Dragging left: items between dragOverIndex and draggedIndex shift right
+                if (index >= dragOverIndex && index < draggedIndex) {
+                  shouldShift = true;
+                  shiftDirection = 1;
+                }
+              }
+            }
 
             return (
               <div
                 key={overlay.id}
-                className={`group relative rounded-lg border-2 p-1 transition-all ${
+                ref={(el) => { itemRefs.current[index] = el; }}
+                onMouseDown={(e) => handleMouseDown(e, index)}
+                style={{
+                  transform: shouldShift
+                    ? `translateX(${shiftDirection * 62}px)`
+                    : 'none',
+                  opacity: isDragging ? 0.3 : 1,
+                }}
+                className={`group relative cursor-grab rounded-lg border-2 p-1 transition-all duration-200 ease-out select-none ${
                   isSelected
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
                     : 'border-zinc-200 bg-white hover:border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-600'
                 }`}
               >
+                {/* Layer index badge */}
+                <span className="absolute -left-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-zinc-600 text-[10px] font-medium text-white dark:bg-zinc-500">
+                  {index + 1}
+                </span>
                 <button
                   type="button"
                   onClick={() => handleSelect(overlay.id)}
@@ -235,7 +335,8 @@ export function OverlayImageUploader() {
                   <img
                     src={overlay.element.src}
                     alt="Overlay"
-                    className="h-12 w-12 object-contain"
+                    className="pointer-events-none h-12 w-12 object-contain"
+                    draggable={false}
                   />
                 </button>
                 <button
@@ -260,6 +361,31 @@ export function OverlayImageUploader() {
               </div>
             );
           })}
+
+          {/* Floating dragged item */}
+          {draggedIndex !== null && state.overlayImages[draggedIndex] && (
+            <div
+              style={{
+                position: 'fixed',
+                left: dragPosition.x - dragOffset.x,
+                top: dragPosition.y - dragOffset.y,
+                zIndex: 9999,
+                pointerEvents: 'none',
+              }}
+              className="rounded-lg border-2 border-blue-500 bg-blue-50 p-1 shadow-xl dark:bg-blue-900/80"
+            >
+              <span className="absolute -left-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-blue-500 text-[10px] font-medium text-white">
+                {draggedIndex + 1}
+              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={state.overlayImages[draggedIndex].element.src}
+                alt="Dragging"
+                className="h-12 w-12 object-contain"
+                draggable={false}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>
