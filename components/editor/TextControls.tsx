@@ -46,14 +46,89 @@ export function TextControls() {
         }
       />
 
-      {/* Text Color */}
-      <ColorPicker
-        label={t('textColor')}
-        value={state.text.color}
-        onChange={(color) =>
-          dispatch({ type: 'SET_TEXT', payload: { color } })
-        }
-      />
+      {/* Text Color & Style */}
+      <div className="flex items-end gap-3">
+        <div className="flex-1">
+          <ColorPicker
+            label={t('textColor')}
+            value={state.text.color}
+            onChange={(color) =>
+              dispatch({ type: 'SET_TEXT', payload: { color } })
+            }
+          />
+        </div>
+        {/* Text Style Buttons */}
+        <div className="flex gap-1">
+          <button
+            type="button"
+            onClick={() =>
+              dispatch({
+                type: 'SET_TEXT',
+                payload: { style: { ...state.text.style, bold: !state.text.style.bold } },
+              })
+            }
+            className={`flex h-9 w-9 items-center justify-center rounded-md border text-sm font-bold transition-colors ${
+              state.text.style.bold
+                ? 'border-blue-500 bg-blue-500 text-white'
+                : 'border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700'
+            }`}
+            title={t('textStyleBold')}
+          >
+            B
+          </button>
+          <button
+            type="button"
+            onClick={() =>
+              dispatch({
+                type: 'SET_TEXT',
+                payload: { style: { ...state.text.style, italic: !state.text.style.italic } },
+              })
+            }
+            className={`flex h-9 w-9 items-center justify-center rounded-md border text-sm italic transition-colors ${
+              state.text.style.italic
+                ? 'border-blue-500 bg-blue-500 text-white'
+                : 'border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700'
+            }`}
+            title={t('textStyleItalic')}
+          >
+            I
+          </button>
+          <button
+            type="button"
+            onClick={() =>
+              dispatch({
+                type: 'SET_TEXT',
+                payload: { style: { ...state.text.style, underline: !state.text.style.underline } },
+              })
+            }
+            className={`flex h-9 w-9 items-center justify-center rounded-md border text-sm underline transition-colors ${
+              state.text.style.underline
+                ? 'border-blue-500 bg-blue-500 text-white'
+                : 'border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700'
+            }`}
+            title={t('textStyleUnderline')}
+          >
+            U
+          </button>
+          <button
+            type="button"
+            onClick={() =>
+              dispatch({
+                type: 'SET_TEXT',
+                payload: { style: { ...state.text.style, strikethrough: !state.text.style.strikethrough } },
+              })
+            }
+            className={`flex h-9 w-9 items-center justify-center rounded-md border text-sm line-through transition-colors ${
+              state.text.style.strikethrough
+                ? 'border-blue-500 bg-blue-500 text-white'
+                : 'border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700'
+            }`}
+            title={t('textStyleStrikethrough')}
+          >
+            S
+          </button>
+        </div>
+      </div>
 
       {/* Horizontal Position Offset Slider */}
       <Slider
