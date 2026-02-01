@@ -32,8 +32,10 @@ export function drawText(
     ctx.translate(-x, -(baseY + offsetY));
   }
 
-  // Set font
-  ctx.font = `bold ${text.fontSize}px sans-serif`;
+  // Build font string based on style
+  const fontWeight = text.style.bold ? 'bold' : 'normal';
+  const fontStyle = text.style.italic ? 'italic' : 'normal';
+  ctx.font = `${fontStyle} ${fontWeight} ${text.fontSize}px sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
 
@@ -76,6 +78,37 @@ export function drawText(
   lines.forEach((line, index) => {
     const y = startY + index * lineHeight;
     ctx.fillText(line, x, y);
+
+    // Draw underline and strikethrough decorations
+    if (text.style.underline || text.style.strikethrough) {
+      const metrics = ctx.measureText(line);
+      const lineWidth = metrics.width;
+      const lineThickness = Math.max(2, text.fontSize / 20);
+
+      ctx.save();
+      ctx.strokeStyle = text.color;
+      ctx.lineWidth = lineThickness;
+
+      // Underline
+      if (text.style.underline) {
+        const underlineY = y + text.fontSize * 0.35;
+        ctx.beginPath();
+        ctx.moveTo(x - lineWidth / 2, underlineY);
+        ctx.lineTo(x + lineWidth / 2, underlineY);
+        ctx.stroke();
+      }
+
+      // Strikethrough
+      if (text.style.strikethrough) {
+        const strikeY = y;
+        ctx.beginPath();
+        ctx.moveTo(x - lineWidth / 2, strikeY);
+        ctx.lineTo(x + lineWidth / 2, strikeY);
+        ctx.stroke();
+      }
+
+      ctx.restore();
+    }
   });
 
   ctx.restore();
