@@ -35,6 +35,13 @@ function canvasReducer(state: CanvasState, action: CanvasAction): CanvasState {
         overlayImages: state.overlayImages.filter((img) => img.id !== action.payload),
         selectedOverlayId: state.selectedOverlayId === action.payload ? null : state.selectedOverlayId,
       };
+    case 'REORDER_OVERLAY': {
+      const { fromIndex, toIndex } = action.payload;
+      const newOverlays = [...state.overlayImages];
+      const [moved] = newOverlays.splice(fromIndex, 1);
+      newOverlays.splice(toIndex, 0, moved);
+      return { ...state, overlayImages: newOverlays };
+    }
     case 'SELECT_OVERLAY':
       return { ...state, selectedOverlayId: action.payload };
     case 'RESET':
