@@ -316,7 +316,7 @@ export function OverlayImageEditor({
         cursor: isEditing ? 'text' : 'grab',
         outline: 'none',
       }}
-      className={`${isSelected ? 'z-10' : 'z-0'}`}
+      className={`${isSelected ? 'z-20' : 'z-10'}`}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
