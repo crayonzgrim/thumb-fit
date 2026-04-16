@@ -1,0 +1,156 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - heading "Thumb Fit" [level=1] [ref=e8]
+          - paragraph [ref=e9]: YouTube, Instagram 등을 위한 완벽한 썸네일 만들기
+        - generic [ref=e10]:
+          - button "문의" [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e16]: 문의
+          - generic [ref=e17]:
+            - button "🇺🇸 EN" [ref=e18]:
+              - generic [ref=e19]: 🇺🇸
+              - generic [ref=e20]: EN
+            - button "🇰🇷 KO" [ref=e21]:
+              - generic [ref=e22]: 🇰🇷
+              - generic [ref=e23]: KO
+      - generic [ref=e35]:
+        - combobox [ref=e36]:
+          - option "PNG" [selected]
+          - option "JPEG"
+        - button "다운로드" [ref=e37]
+    - generic [ref=e39]:
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - generic [ref=e172]: 이미지 업로드
+          - generic [ref=e173]:
+            - generic [ref=e174]: thumb-fit.png
+            - button "삭제" [ref=e175]
+            - button "이미지 변경" [ref=e176]
+        - generic [ref=e177]:
+          - generic [ref=e178]: 배경 채우기 방식
+          - generic [ref=e179]:
+            - generic [ref=e180] [cursor=pointer]:
+              - radio "Blur (빠름)" [checked] [active] [ref=e181]
+              - generic [ref=e182]: Blur (빠름)
+            - generic [ref=e183] [cursor=pointer]:
+              - radio "AI 생성 (고품질)" [ref=e184]
+              - generic [ref=e185]: AI 생성 (고품질)
+      - generic [ref=e41]:
+        - generic [ref=e42]: 비율
+        - generic [ref=e43]:
+          - button "16:9 유튜브" [ref=e44]:
+            - generic [ref=e45]: 16:9
+            - generic [ref=e46]: 유튜브
+          - button "9:16 스토리" [ref=e47]:
+            - generic [ref=e48]: 9:16
+            - generic [ref=e49]: 스토리
+          - button "1:1 정사각형" [ref=e50]:
+            - generic [ref=e51]: 1:1
+            - generic [ref=e52]: 정사각형
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: 이미지 추가
+          - generic [ref=e57]: 썸네일에 아이콘이나 스티커를 추가하세요
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: 이미지 업로드
+            - generic [ref=e61] [cursor=pointer]:
+              - img [ref=e62]
+              - generic [ref=e64]: Click or Drop
+          - generic [ref=e65]:
+            - generic [ref=e66]: 이모지 추가
+            - button "😀 Open Picker" [ref=e67]:
+              - generic [ref=e68]: 😀
+              - generic [ref=e69]: Open Picker
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: 템플릿
+          - generic [ref=e74]: 텍스트 입력 후 여러 종류의 템플릿을 사용해보세요
+        - generic [ref=e75]:
+          - button "🎬 유튜브 볼드" [ref=e76]:
+            - generic [ref=e77]: 🎬
+            - generic [ref=e78]: 유튜브 볼드
+          - button "✨ 미니멀 클린" [ref=e79]:
+            - generic [ref=e80]: ✨
+            - generic [ref=e81]: 미니멀 클린
+          - button "🌈 바이브런트 스토리" [ref=e82]:
+            - generic [ref=e83]: 🌈
+            - generic [ref=e84]: 바이브런트 스토리
+          - button "📸 인스타그램 팝" [ref=e85]:
+            - generic [ref=e86]: 📸
+            - generic [ref=e87]: 인스타그램 팝
+          - button "🎮 게이밍 스타일" [ref=e88]:
+            - generic [ref=e89]: 🎮
+            - generic [ref=e90]: 게이밍 스타일
+          - button "🌙 엘레강트 다크" [ref=e91]:
+            - generic [ref=e92]: 🌙
+            - generic [ref=e93]: 엘레강트 다크
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]: 텍스트
+          - textbox "텍스트" [ref=e97]:
+            - /placeholder: 텍스트를 입력하세요...
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: 글꼴 크기
+            - generic [ref=e101]: "48"
+          - slider [ref=e102] [cursor=pointer]: "48"
+        - generic [ref=e103]:
+          - generic [ref=e105]:
+            - generic [ref=e106]: 텍스트 색상
+            - generic [ref=e107]:
+              - textbox [ref=e108] [cursor=pointer]: "#ffffff"
+              - generic [ref=e109]: "#FFFFFF"
+          - generic [ref=e110]:
+            - button "B" [ref=e111]
+            - button "I" [ref=e112]
+            - button "U" [ref=e113]
+            - button "S" [ref=e114]
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e117]: 좌우 위치
+            - generic [ref=e118]: "0"
+          - slider [ref=e119] [cursor=pointer]: "0"
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - generic [ref=e122]: 상하 위치
+            - generic [ref=e123]: "0"
+          - slider [ref=e124] [cursor=pointer]: "0"
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127]: 회전
+            - generic [ref=e128]: "0"
+          - slider [ref=e129] [cursor=pointer]: "0"
+        - generic [ref=e132]:
+          - generic [ref=e133]: 텍스트 배경
+          - checkbox [ref=e134]
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - generic [ref=e138]: 텍스트 그림자
+            - checkbox [checked] [ref=e139]
+          - generic [ref=e140]:
+            - generic [ref=e141]: 그림자 색상
+            - generic [ref=e142]:
+              - textbox [ref=e143] [cursor=pointer]: "#000000"
+              - generic [ref=e144]: "#000000"
+          - generic [ref=e145]:
+            - generic [ref=e146]:
+              - generic [ref=e147]: 흐림
+              - generic [ref=e148]: "8"
+            - slider [ref=e149] [cursor=pointer]: "8"
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: 가로 오프셋
+              - generic [ref=e153]: "2"
+            - slider [ref=e154] [cursor=pointer]: "2"
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]: 세로 오프셋
+              - generic [ref=e158]: "2"
+            - slider [ref=e159] [cursor=pointer]: "2"
+  - button "Open Next.js Dev Tools" [ref=e166] [cursor=pointer]:
+    - img [ref=e167]
+  - alert [ref=e160]

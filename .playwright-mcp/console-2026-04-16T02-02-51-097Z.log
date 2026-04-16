@@ -1,0 +1,5 @@
+[    3375ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://encrypted-tbn0.gstatic.com/faviconV2?url=https://mail.naver.com&client=IMAGE_SEARCH&size=24&type=FAVICON&fallback_opts=TYPE,SIZE,URL:0
+[    8299ms] [WARNING] setPolicyInfo {versionInfo: Object, sdkInfo: Object, sentryInfo: Object} @ https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js:0
+[    8516ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com'). @ https://pm.pstatic.net/resources/js/main.10379089.js?o=www:1
+[    8516ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://recoshopping.naver.com') does not match the recipient window's origin ('https://www.naver.com'). @ https://pm.pstatic.net/resources/js/main.10379089.js?o=www:1
+[   14303ms] [WARNING] setPolicyInfo {versionInfo: Object, sdkInfo: Object, sentryInfo: Object} @ https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js:0

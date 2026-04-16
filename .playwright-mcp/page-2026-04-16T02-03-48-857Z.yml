@@ -1,0 +1,167 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - heading "Thumb Fit" [level=1] [ref=e8]
+          - paragraph [ref=e9]: YouTube, Instagram 등을 위한 완벽한 썸네일 만들기
+        - generic [ref=e10]:
+          - button "문의" [ref=e12]:
+            - img [ref=e13]
+          - generic [ref=e16]:
+            - button "🇺🇸 EN" [ref=e17]:
+              - generic [ref=e18]: 🇺🇸
+              - generic [ref=e19]: EN
+            - button "🇰🇷 KO" [ref=e20]:
+              - generic [ref=e21]: 🇰🇷
+              - generic [ref=e22]: KO
+      - insertion [ref=e171]:
+        - iframe [ref=e174]:
+          - generic [ref=f52e3]:
+            - link "광고 고음확장기 PITCH X 아이돌연습생 아이돌 연습생도 쓰는 고음 비법 코어오브" [ref=f52e4] [cursor=pointer]:
+              - /url: https://tr.ds.kakao.com/clk?wa=x5WCDn0tOO-Of_PsyZvSMPUHMAKYhMa0oyuTDrqrm40&enc=NWymO73okEQK2zXvTMz8H8gXf0EcX1AubBSgN9gjJYMuQSFfshJmWg6E0omSdfBiuozNS_xzOOSGs5hvzfuA0KNzXAH8CmJykyKesOaqZoanR3_3_JZpwR5Jr4Nopty-5W7aKzYvaXBh8hKtKbZVd0jLkVI4P0HM4jzWzg3EAAQt5d-iFbxiL6V9lLLRa4KVj55dfl0Y1hQ2yVIDx3oH8VwlEvai49htPxSMSzVuOoX7wlhOT-kAD6eT9HTjk65kxatl2wLPtz_n8WOBOgbYcGbESgBBNb8aCLH2TT58pjoqfA8xA1LtWaGkTYMq7pMmFz6mr6NzWys-k1MxYy-iPFkbWvCeG-R6vQssvCiYOVuyn834WF94tnLyUIpuJ9UbtGbhEzkU2WmS-f591Dwr80bSNucBQBL3OxzL68NJlZQzepTYLq2cnp_glP1PK2k4OahTRHKObGapaqaYiZrBrDtsBB41ORgaHPkgMdMvnPLnOw2G75F_8F3XU9Q-uTI6pMbWK6-k5eJlgnM4KN2iDoNy2sTrYh3ftu_hWp_UHM0eQSYRJG2F3q8Q7ODHhFNahGdRzB2QTepQCnvAqWfzKQ&signature=3d6a62354db79790da718722244315f0&lc=1&rd=%7B%22adunit_type_seq%22%3A139%2C%22banner_adunit_type_seq%22%3A139%2C%22native_adunit_type_seq%22%3A1322%2C%22template_seq%22%3A16%7D
+              - img "광고 고음확장기 PITCH X 아이돌연습생" [ref=f52e6]
+              - generic [ref=f52e7]:
+                - strong [ref=f52e8]: 아이돌 연습생도 쓰는 고음 비법
+                - generic [ref=f52e9]: 코어오브
+            - link "광고 정보" [ref=f52e10] [cursor=pointer]:
+              - /url: https://info.ds.kakao.com/optout.do
+              - img "광고 정보" [ref=f52e11]
+      - generic [ref=e34]:
+        - combobox [ref=e35]:
+          - option "PNG" [selected]
+          - option "JPEG"
+        - button "다운로드" [ref=e36]
+    - generic [ref=e38]:
+      - generic [ref=e175]:
+        - generic [ref=e176]:
+          - generic [ref=e177]: 이미지 업로드
+          - generic [ref=e178]:
+            - generic [ref=e179]: thumb-fit.png
+            - button "삭제" [ref=e180]
+            - button "이미지 변경" [ref=e181]
+        - generic [ref=e182]:
+          - generic [ref=e183]: 배경 채우기 방식
+          - generic [ref=e184]:
+            - generic [ref=e185] [cursor=pointer]:
+              - radio "Blur (빠름)" [checked] [ref=e186]
+              - generic [ref=e187]: Blur (빠름)
+            - generic [ref=e188] [cursor=pointer]:
+              - radio "AI 생성 (고품질)" [ref=e189]
+              - generic [ref=e190]: AI 생성 (고품질)
+      - generic [ref=e40]:
+        - generic [ref=e41]: 비율
+        - generic [ref=e42]:
+          - button "16:9 유튜브" [ref=e43]:
+            - generic [ref=e44]: 16:9
+            - generic [ref=e45]: 유튜브
+          - button "9:16 스토리" [ref=e46]:
+            - generic [ref=e47]: 9:16
+            - generic [ref=e48]: 스토리
+          - button "1:1 정사각형" [ref=e49]:
+            - generic [ref=e50]: 1:1
+            - generic [ref=e51]: 정사각형
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 이미지 추가
+          - generic [ref=e56]: 썸네일에 아이콘이나 스티커를 추가하세요
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: 이미지 업로드
+            - generic [ref=e60] [cursor=pointer]:
+              - img [ref=e61]
+              - generic [ref=e63]: Click or Drop
+          - generic [ref=e64]:
+            - generic [ref=e65]: 이모지 추가
+            - button "😀 Open Picker" [ref=e66]:
+              - generic [ref=e67]: 😀
+              - generic [ref=e68]: Open Picker
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: 템플릿
+          - generic [ref=e73]: 텍스트 입력 후 여러 종류의 템플릿을 사용해보세요
+        - generic [ref=e74]:
+          - button "🎬 유튜브 볼드" [ref=e75]:
+            - generic [ref=e76]: 🎬
+            - generic [ref=e77]: 유튜브 볼드
+          - button "✨ 미니멀 클린" [ref=e78]:
+            - generic [ref=e79]: ✨
+            - generic [ref=e80]: 미니멀 클린
+          - button "🌈 바이브런트 스토리" [ref=e81]:
+            - generic [ref=e82]: 🌈
+            - generic [ref=e83]: 바이브런트 스토리
+          - button "📸 인스타그램 팝" [ref=e84]:
+            - generic [ref=e85]: 📸
+            - generic [ref=e86]: 인스타그램 팝
+          - button "🎮 게이밍 스타일" [ref=e87]:
+            - generic [ref=e88]: 🎮
+            - generic [ref=e89]: 게이밍 스타일
+          - button "🌙 엘레강트 다크" [ref=e90]:
+            - generic [ref=e91]: 🌙
+            - generic [ref=e92]: 엘레강트 다크
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 텍스트
+          - textbox "텍스트" [ref=e96]:
+            - /placeholder: 텍스트를 입력하세요...
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e99]: 글꼴 크기
+            - generic [ref=e100]: "48"
+          - slider [ref=e101] [cursor=pointer]: "48"
+        - generic [ref=e102]:
+          - generic [ref=e104]:
+            - generic [ref=e105]: 텍스트 색상
+            - generic [ref=e106]:
+              - textbox [ref=e107] [cursor=pointer]: "#ffffff"
+              - generic [ref=e108]: "#FFFFFF"
+          - generic [ref=e109]:
+            - button "B" [ref=e110]
+            - button "I" [ref=e111]
+            - button "U" [ref=e112]
+            - button "S" [ref=e113]
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]: 좌우 위치
+            - generic [ref=e117]: "0"
+          - slider [ref=e118] [cursor=pointer]: "0"
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - generic [ref=e121]: 상하 위치
+            - generic [ref=e122]: "0"
+          - slider [ref=e123] [cursor=pointer]: "0"
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e126]: 회전
+            - generic [ref=e127]: "0"
+          - slider [ref=e128] [cursor=pointer]: "0"
+        - generic [ref=e131]:
+          - generic [ref=e132]: 텍스트 배경
+          - checkbox [ref=e133]
+        - generic [ref=e135]:
+          - generic [ref=e136]:
+            - generic [ref=e137]: 텍스트 그림자
+            - checkbox [checked] [ref=e138]
+          - generic [ref=e139]:
+            - generic [ref=e140]: 그림자 색상
+            - generic [ref=e141]:
+              - textbox [ref=e142] [cursor=pointer]: "#000000"
+              - generic [ref=e143]: "#000000"
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146]: 흐림
+              - generic [ref=e147]: "8"
+            - slider [ref=e148] [cursor=pointer]: "8"
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e151]: 가로 오프셋
+              - generic [ref=e152]: "2"
+            - slider [ref=e153] [cursor=pointer]: "2"
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - generic [ref=e156]: 세로 오프셋
+              - generic [ref=e157]: "2"
+            - slider [ref=e158] [cursor=pointer]: "2"
+  - button "Open Next.js Dev Tools" [ref=e164] [cursor=pointer]:
+    - img [ref=e165]
+  - alert [ref=e168]

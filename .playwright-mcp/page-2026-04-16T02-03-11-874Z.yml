@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - heading "Thumb Fit" [level=1] [ref=e8]
+          - paragraph [ref=e9]: YouTube, Instagram 등을 위한 완벽한 썸네일 만들기
+        - generic [ref=e10]:
+          - button "문의" [ref=e12]:
+            - img [ref=e13]
+            - text: 문의
+          - generic [ref=e16]:
+            - button "🇺🇸EN" [ref=e17]
+            - button "🇰🇷KO" [ref=e18]
+      - generic [ref=e20]:
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - paragraph [ref=e26]: 이미지를 여기에 드래그 앤 드롭
+          - paragraph [ref=e27]: 또는 클릭하여 업로드
+          - paragraph [ref=e28]: PNG, JPG, GIF 최대 10MB
+        - button "Choose File" [ref=e29]
+      - generic [ref=e31]:
+        - combobox [ref=e32]:
+          - option "PNG" [selected]
+          - option "JPEG"
+        - button "다운로드" [ref=e33]
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - text: 비율
+        - generic [ref=e37]:
+          - button "16:9유튜브" [ref=e38]
+          - button "9:16스토리" [ref=e39]
+          - button "1:1정사각형" [ref=e40]
+      - generic [ref=e41]:
+        - generic [ref=e42]: 이미지 추가썸네일에 아이콘이나 스티커를 추가하세요
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - text: 이미지 업로드
+            - button "Click or Drop" [ref=e45]
+            - generic [ref=e46]:
+              - img [ref=e47]
+              - text: Click or Drop
+          - generic [ref=e49]:
+            - text: 이모지 추가
+            - button "😀Open Picker" [ref=e50]
+      - generic [ref=e51]:
+        - generic [ref=e52]: 템플릿텍스트 입력 후 여러 종류의 템플릿을 사용해보세요
+        - generic [ref=e53]:
+          - button "🎬유튜브 볼드" [ref=e54]
+          - button "✨미니멀 클린" [ref=e55]
+          - button "🌈바이브런트 스토리" [ref=e56]
+          - button "📸인스타그램 팝" [ref=e57]
+          - button "🎮게이밍 스타일" [ref=e58]
+          - button "🌙엘레강트 다크" [ref=e59]
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - text: 텍스트
+          - textbox "텍스트" [ref=e62]:
+            - /placeholder: 텍스트를 입력하세요...
+        - generic [ref=e63]:
+          - generic [ref=e64]: 글꼴 크기48
+          - slider [ref=e65]: "48"
+        - generic [ref=e66]:
+          - generic [ref=e68]:
+            - text: 텍스트 색상
+            - generic [ref=e69]:
+              - textbox [ref=e70]: "#ffffff"
+              - text: "#FFFFFF"
+          - generic [ref=e71]:
+            - button "B" [ref=e72]
+            - button "I" [ref=e73]
+            - button "U" [ref=e74]
+            - button "S" [ref=e75]
+        - generic [ref=e76]:
+          - generic [ref=e77]: 좌우 위치0
+          - slider [ref=e78]: "0"
+        - generic [ref=e79]:
+          - generic [ref=e80]: 상하 위치0
+          - slider [ref=e81]: "0"
+        - generic [ref=e82]:
+          - generic [ref=e83]: 회전0
+          - slider [ref=e84]: "0"
+        - generic [ref=e87]:
+          - text: 텍스트 배경
+          - checkbox [ref=e88]
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - text: 텍스트 그림자
+            - checkbox [checked] [ref=e92]
+          - generic [ref=e93]:
+            - text: 그림자 색상
+            - generic [ref=e94]:
+              - textbox [ref=e95]: "#000000"
+              - text: "#000000"
+          - generic [ref=e96]:
+            - generic [ref=e97]: 흐림8
+            - slider [ref=e98]: "8"
+          - generic [ref=e99]:
+            - generic [ref=e100]: 가로 오프셋2
+            - slider [ref=e101]: "2"
+          - generic [ref=e102]:
+            - generic [ref=e103]: 세로 오프셋2
+            - slider [ref=e104]: "2"
+  - button "Open Next.js Dev Tools" [ref=e110] [cursor=pointer]:
+    - img [ref=e111]
+  - alert [ref=e114]

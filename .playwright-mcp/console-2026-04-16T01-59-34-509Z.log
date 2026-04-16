@@ -1,0 +1,28 @@
+[     130ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[     175ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[     397ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[     766ms] [ERROR] Failed to load resource: the server responded with a status of 429 () @ https://aem-kakao-collector.onkakao.net/api/4571/store/?sentry_version=7&sentry_key=38c126fc1d7a4fa7be47d3974536cf64:0
+[     766ms] [ERROR] Refused to get unsafe header "Retry-After" @ http://t1.daumcdn.net/kas/static/ba.min.js:3
+[    1052ms] [LOG] [Fast Refresh] done in 755ms @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[   92462ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[   92472ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[   93749ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[   93760ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  110557ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=YBJgEGemmG9Ral4Ty6BnT' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_client_b03d496f._.js:10878
+[  111560ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=YBJgEGemmG9Ral4Ty6BnT' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_client_b03d496f._.js:10878
+[  112563ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=YBJgEGemmG9Ral4Ty6BnT' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_client_b03d496f._.js:10878
+[  113710ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  114039ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  114050ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  115955ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  115981ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  117111ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  117137ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  118309ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  118320ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  126926ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  127044ms] [LOG] [Fast Refresh] done in 220ms @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  140071ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  140084ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  163088ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
+[  163119ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/fa8dd_next_dist_fd32fe63._.js:2297
