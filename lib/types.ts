@@ -12,7 +12,7 @@ export interface ImageState {
   element: HTMLImageElement | null;
   isLoading: boolean;
   error: string | null;
-  blurBackground: boolean;
+  backgroundMode: 'blur' | 'ai';
 }
 
 export interface TextShadow {
