@@ -50,7 +50,7 @@ export const INITIAL_STATE: CanvasState = {
     element: null,
     isLoading: false,
     error: null,
-    blurBackground: true,
+    backgroundMode: 'blur',
   },
   text: {
     content: '',
