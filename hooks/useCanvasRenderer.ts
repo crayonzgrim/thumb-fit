@@ -85,7 +85,7 @@ export function useCanvasRenderer({ canvasRef, state }: UseCanvasRendererOptions
 
     // Draw image layers if image is loaded
     if (state.image.element) {
-      if (state.image.blurBackground) {
+      if (state.image.backgroundMode === 'blur') {
         drawBlurBackground(ctx, state.image.element, config.width, config.height);
       }
       drawMainImage(ctx, state.image.element, config.width, config.height);

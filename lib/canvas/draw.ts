@@ -1,15 +1,17 @@
+import { getContainPlacement } from './inpaint';
+
 export function drawMainImage(
   ctx: CanvasRenderingContext2D,
   img: HTMLImageElement,
   canvasWidth: number,
   canvasHeight: number
 ) {
-  // Calculate contain dimensions
-  const scale = Math.min(canvasWidth / img.width, canvasHeight / img.height);
-  const drawWidth = img.width * scale;
-  const drawHeight = img.height * scale;
-  const drawX = (canvasWidth - drawWidth) / 2;
-  const drawY = (canvasHeight - drawHeight) / 2;
+  const { drawWidth, drawHeight, drawX, drawY } = getContainPlacement(
+    img.width,
+    img.height,
+    canvasWidth,
+    canvasHeight
+  );
 
   ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
 }
