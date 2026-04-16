@@ -5,29 +5,57 @@ import { useCanvasState } from '@/hooks/useCanvasState';
 import { useImageLoader } from '@/hooks/useImageLoader';
 import { useI18n } from '@/lib/i18n';
 import { Button } from '@/components/ui/Button';
+import { AIBackgroundButton } from './AIBackgroundButton';
 
-function BlurBackgroundToggle() {
+function BackgroundModeSelector() {
   const { state, dispatch } = useCanvasState();
   const { t } = useI18n();
 
   if (!state.image.element) return null;
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex flex-col gap-2">
       <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-        {t('blurBackground')}
+        배경 채우기 방식
       </label>
-      <input
-        type="checkbox"
-        checked={state.image.blurBackground}
-        onChange={(e) =>
-          dispatch({
-            type: 'SET_IMAGE',
-            payload: { blurBackground: e.target.checked },
-          })
-        }
-        className="h-4 w-4 rounded border-zinc-300 text-blue-600 focus:ring-blue-500"
-      />
+      <div className="flex gap-3">
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="radio"
+            name="backgroundMode"
+            value="blur"
+            checked={state.image.backgroundMode === 'blur'}
+            onChange={(e) =>
+              dispatch({
+                type: 'SET_IMAGE',
+                payload: { backgroundMode: 'blur' as const },
+              })
+            }
+            className="h-4 w-4"
+          />
+          <span className="text-sm text-zinc-600 dark:text-zinc-400">
+            Blur (빠름)
+          </span>
+        </label>
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="radio"
+            name="backgroundMode"
+            value="ai"
+            checked={state.image.backgroundMode === 'ai'}
+            onChange={(e) =>
+              dispatch({
+                type: 'SET_IMAGE',
+                payload: { backgroundMode: 'ai' as const },
+              })
+            }
+            className="h-4 w-4"
+          />
+          <span className="text-sm text-zinc-600 dark:text-zinc-400">
+            AI 생성 (고품질)
+          </span>
+        </label>
+      </div>
     </div>
   );
 }
@@ -85,7 +113,8 @@ export function ImageUploader() {
           </Button>
         </div>
       </div>
-      <BlurBackgroundToggle />
+      <BackgroundModeSelector />
+      {state.image.backgroundMode === 'ai' && <AIBackgroundButton />}
       <input
         ref={inputRef}
         type="file"
