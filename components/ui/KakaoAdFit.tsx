@@ -21,7 +21,7 @@ export function KakaoAdFit({ unit, width, height, className }: KakaoAdFitProps) 
     if (!container) return;
 
     const script = document.querySelector<HTMLScriptElement>(
-      'script[src="//t1.daumcdn.net/kas/static/ba.min.js"], script[src="https://t1.daumcdn.net/kas/static/ba.min.js"]'
+      'script[src="//t1.kakaocdn.net/kas/static/ba.min.js"], script[src="https://t1.kakaocdn.net/kas/static/ba.min.js"]'
     );
 
     if (!script) return;
@@ -54,7 +54,7 @@ export function KakaoAdFit({ unit, width, height, className }: KakaoAdFitProps) 
     <>
       <Script
         id="kakao-adfit-script"
-        src="https://t1.daumcdn.net/kas/static/ba.min.js"
+        src="https://t1.kakaocdn.net/kas/static/ba.min.js"
         strategy="lazyOnload"
         onLoad={() => {
           const target = document.getElementById("kakao-adfit-script");
